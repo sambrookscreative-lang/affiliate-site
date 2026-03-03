@@ -185,3 +185,136 @@
     padding: 0 1rem;
   }
 }
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll reveal animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animations to cards */
+.feature-card, .tool-card, .article-card {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Enhanced button styles */
+.cta-button, .btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before, .btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.cta-button:hover::before, .btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Improved shadows */
+.feature-card, .tool-card, .article-card, .newsletter-box {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card:hover, .tool-card:hover, .article-card:hover {
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.25);
+}
+
+/* Trust badge pulse */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.badge {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Gradient text shine effect */
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.gradient-text {
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+img:not([src]) {
+  opacity: 0;
+}
+
+/* Better focus states for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Loading state */
+@keyframes skeleton {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* Enhanced mobile touch targets */
+@media (hover: none) and (pointer: coarse) {
+  .nav-links a, .cta-button, .btn-primary, .btn-secondary {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
