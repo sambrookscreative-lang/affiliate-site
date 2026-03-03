@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourdomain.com/sitemap.xml
+# Sitemap
+Sitemap: https://affiliate-site.sam-brooks-creative.workers.dev/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
