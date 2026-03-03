@@ -10,46 +10,57 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </p>
     
     <div class="review-grid">
-      <div class="review-card">
-        <h3>HubSpot</h3>
-        <p class="category">AI Automation • CRM</p>
-        <p>All-in-one CRM and marketing automation platform. 30% recurring commission for 12 months.</p>
-        <div class="tool-meta">
-          <span>⭐ 4.5/5</span>
-          <span>💰 High-ticket</span>
+      <a href="/blog/hubspot-vs-salesforce-2026" class="review-card-link">
+        <div class="review-card">
+          <h3>HubSpot</h3>
+          <p class="category">AI Automation • CRM</p>
+          <p>All-in-one CRM and marketing automation platform. Recurring commission program available.</p>
+          <div class="tool-meta">
+            <span>⭐ 4.5/5</span>
+            <span>💰 High-ticket</span>
+          </div>
+          <span class="read-more">Read Full Comparison →</span>
         </div>
-        <a href="/blog/hubspot-vs-salesforce-2026" class="btn">Read Review →</a>
-      </div>
-      <div class="review-card">
-        <h3>Scalenut</h3>
-        <p class="category">AI Content • SEO</p>
-        <p>SEO content lifecycle tool with AI-powered writing. 30-50% lifetime recurring commissions.</p>
-        <div class="tool-meta">
-          <span>⭐ 4.7/5</span>
-          <span>💰 Lifetime</span>
+      </a>
+      
+      <a href="/blog/best-ai-automation-tools-2026" class="review-card-link">
+        <div class="review-card">
+          <h3>Scalenut</h3>
+          <p class="category">AI Content • SEO</p>
+          <p>SEO content lifecycle tool with AI-powered writing. Lifetime recurring commission program.</p>
+          <div class="tool-meta">
+            <span>⭐ 4.7/5</span>
+            <span>💰 Lifetime</span>
+          </div>
+          <span class="read-more">Read Review →</span>
         </div>
-        <a href="/blog/best-ai-automation-tools-2026" class="btn">Read Review →</a>
-      </div>
-      <div class="review-card">
-        <h3>NordLayer</h3>
-        <p class="category">Cybersecurity • VPN</p>
-        <p>Enterprise VPN with lifetime revenue share. Business-grade security for remote teams.</p>
-        <div class="tool-meta">
-          <span>⭐ 4.6/5</span>
-          <span>🔒 Enterprise</span>
+      </a>
+      
+      <a href="/blog/secure-automation-stack-guide" class="review-card-link">
+        <div class="review-card">
+          <h3>NordLayer</h3>
+          <p class="category">Cybersecurity • VPN</p>
+          <p>Enterprise VPN with lifetime revenue share program. Business-grade security for remote teams.</p>
+          <div class="tool-meta">
+            <span>⭐ 4.6/5</span>
+            <span>🔒 Enterprise</span>
+          </div>
+          <span class="read-more">Read Security Guide →</span>
         </div>
-        <a href="/blog/secure-automation-stack-guide" class="btn">Read Review →</a>
-      </div>
-      <div class="review-card">
-        <h3>Surfshark</h3>
-        <p class="category">Cybersecurity • VPN</p>
-        <p>Consumer and SMB VPN with 60% commission. Affordable security for small teams.</p>
-        <div class="tool-meta">
-          <span>⭐ 4.6/5</span>
-          <span>🔒 Business</span>
+      </a>
+      
+      <a href="/blog/secure-automation-stack-guide" class="review-card-link">
+        <div class="review-card">
+          <h3>Surfshark</h3>
+          <p class="category">Cybersecurity • VPN</p>
+          <p>Consumer and SMB VPN with competitive commission rates. Affordable security for small teams.</p>
+          <div class="tool-meta">
+            <span>⭐ 4.6/5</span>
+            <span>🔒 Business</span>
+          </div>
+          <span class="read-more">Read Security Guide →</span>
         </div>
-        <a href="/blog/secure-automation-stack-guide" class="btn">Read Review →</a>
-      </div>
+      </a>
     </div>
 
     <div style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; text-align: center;">
@@ -67,18 +78,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     gap: 2rem;
   }
 
+  .review-card-link {
+    text-decoration: none;
+    display: block;
+  }
+
   .review-card {
     padding: 2rem;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 12px;
-    transition: all 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(16px);
+    height: 100%;
+    cursor: pointer;
   }
 
   .review-card:hover {
     border-color: var(--primary);
     transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(99, 102, 241, 0.25);
   }
 
   .review-card h3 {
@@ -91,6 +110,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-size: 0.9rem;
     color: var(--primary);
     margin-bottom: 1rem;
+    display: block;
   }
 
   .review-card p {
@@ -106,14 +126,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--text-secondary);
   }
 
-  .btn {
+  .read-more {
     display: inline-block;
     color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.2s;
   }
 
-  .btn:hover {
-    text-decoration: underline;
+  .review-card:hover .read-more {
+    color: var(--primary-light);
   }
 </style>

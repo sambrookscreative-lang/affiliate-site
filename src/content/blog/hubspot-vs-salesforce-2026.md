@@ -63,9 +63,9 @@ After testing both platforms with 20+ clients, here's the honest comparison nobo
 
 **HubSpot:**
 - Free: $0 (basic CRM)
-- Starter: $45/mo (2 users)
-- Professional: $800/mo
-- Enterprise: $3,600/mo
+- Starter: Starting at ~$20-45/mo (2 users)
+- Professional: Starting at ~$800-890/mo
+- Enterprise: Starting at ~$1,500+/mo
 
 **Salesforce:**
 - Essentials: $25/user/mo
@@ -315,3 +315,7 @@ Ask these 5 questions:
 ---
 
 *Disclosure: Affiliate links included. We earn commissions at no cost to you. All opinions based on real testing.*
+
+---
+
+**Pricing Disclaimer:** All pricing information is approximate and subject to change. Visit HubSpot.com and Salesforce.com for current pricing. Actual costs vary based on seats, contacts, features, and billing cycle selected. Last verified: March 2026.
