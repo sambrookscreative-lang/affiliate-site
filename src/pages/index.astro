@@ -3,110 +3,238 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Home" description="Discover the best AI automation and cybersecurity tools to scale your business securely.">
+  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1>AI Automation Meets<br><span class="highlight">Enterprise Security</span></h1>
-      <p class="hero-subtitle">Discover the tools that let you automate fearlessly.</p>
-      <div class="hero-cta">
-        <a href="/blog" class="btn-primary">Browse Guides</a>
-        <a href="/reviews" class="btn-secondary">Tool Reviews</a>
+      <div class="hero-content">
+        <div class="badge">🚀 Trusted by 10,000+ businesses</div>
+        <h1 class="hero-title">
+          Scale Your Business with
+          <span class="gradient-text">AI Automation</span>
+          <br>Without Compromising Security
+        </h1>
+        <p class="hero-subtitle">
+          Expert reviews and comparisons of the best AI tools and cybersecurity solutions. 
+          Make informed decisions, automate fearlessly.
+        </p>
+        <div class="hero-cta">
+          <a href="/reviews" class="btn-primary">Browse Reviews</a>
+          <a href="/blog" class="btn-secondary">Read Guides</a>
+        </div>
+        <div class="trust-badges">
+          <span>✓ Hands-on tested</span>
+          <span>✓ No BS reviews</span>
+          <span>✓ Security-first</span>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Features Grid -->
   <section class="features">
     <div class="container">
+      <div class="section-header">
+        <h2>Why SecureAutomation?</h2>
+        <p>We bridge the gap between power and protection</p>
+      </div>
       <div class="feature-grid">
         <div class="feature-card">
-          <h3>🤖 AI Automation</h3>
-          <p>HubSpot, Scalenut, and the tools that scale your business without hiring.</p>
+          <div class="feature-icon">🤖</div>
+          <h3>AI Automation</h3>
+          <p>HubSpot, Scalenut, and cutting-edge tools that scale your business without the headcount.</p>
+          <a href="/reviews" class="feature-link">Explore tools →</a>
         </div>
         <div class="feature-card">
-          <h3>🔒 Security First</h3>
-          <p>NordLayer, Surfshark, and enterprise-grade protection for your stack.</p>
+          <div class="feature-icon">🔒</div>
+          <h3>Enterprise Security</h3>
+          <p>NordLayer, Surfshark, and battle-tested solutions to protect your automation stack.</p>
+          <a href="/reviews" class="feature-link">View security →</a>
         </div>
         <div class="feature-card">
-          <h3>📊 Data-Driven</h3>
-          <p>Real reviews, hands-on testing, no fluff.</p>
+          <div class="feature-icon">📊</div>
+          <h3>Data-Driven Reviews</h3>
+          <p>Real testing, honest opinions, zero fluff. We only recommend what we'd use ourselves.</p>
+          <a href="/about" class="feature-link">Our process →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="newsletter-cta">
+  <!-- Featured Tools -->
+  <section class="featured-tools">
     <div class="container">
-      <h2>Stay Updated</h2>
-      <p>Weekly insights on AI tools and security best practices.</p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="your@email.com" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="disclaimer">No spam. Unsubscribe anytime.</p>
+      <div class="section-header">
+        <h2>Top Rated Tools</h2>
+        <p>The tools we actually recommend</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-header">
+            <h3>HubSpot</h3>
+            <span class="badge-small">AI Automation</span>
+          </div>
+          <p>All-in-one CRM and marketing automation. 30% recurring commission for 12 months.</p>
+          <div class="tool-meta">
+            <span>⭐ 4.5/5</span>
+            <span>💰 High-ticket</span>
+          </div>
+          <a href="#" class="tool-link">Read review →</a>
+        </div>
+        <div class="tool-card">
+          <div class="tool-header">
+            <h3>Scalenut</h3>
+            <span class="badge-small">AI Content</span>
+          </div>
+          <p>SEO content lifecycle tool. 30-50% lifetime recurring commissions.</p>
+          <div class="tool-meta">
+            <span>⭐ 4.7/5</span>
+            <span>💰 Lifetime</span>
+          </div>
+          <a href="#" class="tool-link">Read review →</a>
+        </div>
+        <div class="tool-card">
+          <div class="tool-header">
+            <h3>NordLayer</h3>
+            <span class="badge-small">Security</span>
+          </div>
+          <p>Business VPN with lifetime revenue share. Enterprise-grade protection.</p>
+          <div class="tool-meta">
+            <span>⭐ 4.6/5</span>
+            <span>🔒 Enterprise</span>
+          </div>
+          <a href="#" class="tool-link">Read review →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <h2>Stay Ahead of the Curve</h2>
+        <p>Weekly insights on AI automation, security best practices, and exclusive deals.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe Free</button>
+        </form>
+        <p class="newsletter-note">Join 5,000+ readers. No spam, unsubscribe anytime.</p>
+      </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  /* Hero Section */
   .hero {
-    padding: 6rem 0;
+    padding: 6rem 0 4rem;
+    background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
   }
 
-  .hero h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+  .badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 20px;
+    color: var(--primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
   }
 
-  .highlight {
-    color: var(--primary);
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--primary) 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
   }
 
   .hero-cta {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 2rem;
   }
 
   .btn-primary, .btn-secondary {
     padding: 1rem 2rem;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
   }
 
   .btn-primary {
     background: var(--primary);
     color: #000;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
   }
 
   .btn-secondary {
     background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    color: var(--text-primary);
+    border: 2px solid var(--border);
   }
 
   .btn-secondary:hover {
-    background: var(--primary);
-    color: #000;
+    border-color: var(--primary);
+    color: var(--primary);
   }
 
+  .trust-badges {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  /* Features Section */
   .features {
-    padding: 4rem 0;
-    background: var(--bg-card);
+    padding: 5rem 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-header p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
   }
 
   .feature-grid {
@@ -116,42 +244,160 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .feature-card {
-    padding: 2rem;
-    background: var(--bg-dark);
-    border: 1px solid #333;
-    border-radius: 8px;
+    padding: 2.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.3s;
+  }
+
+  .feature-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
 
   .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--primary);
   }
 
-  .newsletter-cta {
-    padding: 4rem 0;
+  .feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-link {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .feature-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Featured Tools */
+  .featured-tools {
+    padding: 5rem 0;
+    background: var(--bg-darker);
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .tool-card {
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.3s;
+  }
+
+  .tool-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+  }
+
+  .tool-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .tool-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .badge-small {
+    padding: 0.25rem 0.75rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .tool-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .tool-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .tool-link {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .tool-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Newsletter Section */
+  .newsletter-section {
+    padding: 5rem 0;
+  }
+
+  .newsletter-box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
     text-align: center;
   }
 
-  .newsletter-cta h2 {
-    font-size: 2.5rem;
+  .newsletter-box h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
+  }
+
+  .newsletter-box > p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
   }
 
   .newsletter-form {
     display: flex;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 2rem auto;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .newsletter-form input {
     flex: 1;
-    padding: 1rem;
-    background: var(--bg-card);
-    border: 1px solid #333;
-    border-radius: 5px;
+    padding: 1rem 1.25rem;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 8px;
     color: var(--text-primary);
+    font-size: 1rem;
+  }
+
+  .newsletter-form input:focus {
+    outline: none;
+    border-color: var(--primary);
   }
 
   .newsletter-form button {
@@ -159,17 +405,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     background: var(--primary);
     color: #000;
     border: none;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
+    transition: all 0.2s;
   }
 
   .newsletter-form button:hover {
-    opacity: 0.9;
+    background: var(--primary-dark);
+    transform: translateY(-1px);
   }
 
-  .disclaimer {
-    font-size: 0.9rem;
+  .newsletter-note {
+    font-size: 0.875rem;
     color: var(--text-secondary);
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+    }
+
+    .trust-badges {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+    }
+
+    .newsletter-form {
+      flex-direction: column;
+    }
+
+    .newsletter-box {
+      padding: 2rem 1.5rem;
+    }
   }
 </style>
