@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Tool Reviews" description="In-depth reviews of AI automation and cybersecurity tools.">
+  <div class="container" style="padding: 4rem 0;">
+    <h1 style="font-size: 3rem; margin-bottom: 2rem; color: var(--primary);">Tool Reviews</h1>
+    <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 3rem;">
+      Honest, data-driven reviews of the tools we've tested.
+    </p>
+    
+    <div class="review-grid">
+      <div class="review-card">
+        <h3>HubSpot</h3>
+        <p class="category">AI Automation • CRM</p>
+        <p>Coming soon: Full review of HubSpot's automation features, pricing, and ROI.</p>
+        <a href="#" class="btn">Read Review →</a>
+      </div>
+      <div class="review-card">
+        <h3>Scalenut</h3>
+        <p class="category">AI Content • SEO</p>
+        <p>Coming soon: Deep dive into Scalenut's AI-powered content creation capabilities.</p>
+        <a href="#" class="btn">Read Review →</a>
+      </div>
+      <div class="review-card">
+        <h3>NordLayer</h3>
+        <p class="category">Cybersecurity • VPN</p>
+        <p>Coming soon: Enterprise VPN security review and implementation guide.</p>
+        <a href="#" class="btn">Read Review →</a>
+      </div>
+      <div class="review-card">
+        <h3>Surfshark</h3>
+        <p class="category">Cybersecurity • VPN</p>
+        <p>Coming soon: Consumer and SMB VPN review with security analysis.</p>
+        <a href="#" class="btn">Read Review →</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .review-card {
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .review-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+  }
+
+  .review-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+
+  .category {
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .review-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .btn:hover {
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home" description="Discover the best AI automation and cybersecurity tools to scale your business securely.">
+  <section class="hero">
+    <div class="container">
+      <h1>AI Automation Meets<br><span class="highlight">Enterprise Security</span></h1>
+      <p class="hero-subtitle">Discover the tools that let you automate fearlessly.</p>
+      <div class="hero-cta">
+        <a href="/blog" class="btn-primary">Browse Guides</a>
+        <a href="/reviews" class="btn-secondary">Tool Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>🤖 AI Automation</h3>
+          <p>HubSpot, Scalenut, and the tools that scale your business without hiring.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔒 Security First</h3>
+          <p>NordLayer, Surfshark, and enterprise-grade protection for your stack.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📊 Data-Driven</h3>
+          <p>Real reviews, hands-on testing, no fluff.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-cta">
+    <div class="container">
+      <h2>Stay Updated</h2>
+      <p>Weekly insights on AI tools and security best practices.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="disclaimer">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding: 6rem 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .highlight {
+    color: var(--primary);
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: #000;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+  }
+
+  .btn-secondary:hover {
+    background: var(--primary);
+    color: #000;
+  }
+
+  .features {
+    padding: 4rem 0;
+    background: var(--bg-card);
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    padding: 2rem;
+    background: var(--bg-dark);
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+
+  .newsletter-cta {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .newsletter-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    padding: 1rem;
+    background: var(--bg-card);
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: var(--text-primary);
+  }
+
+  .newsletter-form button {
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .newsletter-form button:hover {
+    opacity: 0.9;
+  }
+
+  .disclaimer {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+</style>

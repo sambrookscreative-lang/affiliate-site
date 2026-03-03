@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Blog" description="Guides, tutorials, and insights on AI automation and cybersecurity.">
+  <div class="container" style="padding: 4rem 0;">
+    <h1 style="font-size: 3rem; margin-bottom: 2rem; color: var(--primary);">Blog</h1>
+    <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 3rem;">
+      Guides, tutorials, and insights to help you automate securely.
+    </p>
+    
+    <div class="article-grid">
+      <div class="article-card">
+        <h2>Coming Soon: Best AI Automation Tools for 2026</h2>
+        <p>A comprehensive guide to the top AI tools for small businesses and solopreneurs.</p>
+      </div>
+      <div class="article-card">
+        <h2>Coming Soon: How to Secure Your Automation Stack</h2>
+        <p>Security best practices when implementing AI tools in your business.</p>
+      </div>
+      <div class="article-card">
+        <h2>Coming Soon: HubSpot vs Salesforce</h2>
+        <p>Which CRM automation platform is right for your business?</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .article-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .article-card {
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+  }
+
+  .article-card:hover {
+    border-color: var(--primary);
+  }
+
+  .article-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .article-card p {
+    color: var(--text-secondary);
+  }
+</style>

@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Discover the best AI automation and cybersecurity tools for your business." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  <title>{title} | SecureAutomation</title>
+  <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="logo">SecureAutomation</a>
+      <div class="nav-links">
+        <a href="/blog">Blog</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/about">About</a>
+        <a href="/newsletter" class="cta-button">Newsletter</a>
+      </div>
+    </div>
+  </nav>
+  
+  <main>
+    <slot />
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3>SecureAutomation</h3>
+          <p>AI automation meets enterprise security.</p>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="/disclosure">Affiliate Disclosure</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SecureAutomation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
