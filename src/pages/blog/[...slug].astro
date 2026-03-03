@@ -1,0 +1,275 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.description}>
+  <article class="blog-post">
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="category">{entry.data.category}</span>
+        <time datetime={entry.data.pubDate.toISOString()}>
+          {entry.data.pubDate.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          })}
+        </time>
+      </div>
+      <h1>{entry.data.title}</h1>
+      <p class="lead">{entry.data.description}</p>
+      <div class="author-info">
+        <span>By {entry.data.author}</span>
+      </div>
+    </div>
+
+    <div class="post-content">
+      <Content />
+    </div>
+
+    <div class="post-footer">
+      <div class="tags">
+        {entry.data.tags.map((tag) => (
+          <span class="tag">#{tag}</span>
+        ))}
+      </div>
+      <div class="cta-box">
+        <h3>Ready to automate securely?</h3>
+        <p>Explore our recommended tools and start scaling your business.</p>
+        <a href="/reviews" class="cta-btn">Browse Tool Reviews →</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .post-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .category {
+    padding: 0.375rem 0.875rem;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 12px;
+    color: var(--primary-light);
+    font-weight: 600;
+  }
+
+  time {
+    color: var(--text-secondary);
+  }
+
+  .post-header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .author-info {
+    color: var(--text-secondary);
+    font-size: 0.938rem;
+  }
+
+  .post-content {
+    line-height: 1.8;
+    color: var(--text-primary);
+  }
+
+  .post-content :global(h2) {
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .post-content :global(h3) {
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1rem;
+  }
+
+  .post-content :global(h4) {
+    font-size: 1.25rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .post-content :global(p) {
+    margin-bottom: 1.5rem;
+  }
+
+  .post-content :global(ul),
+  .post-content :global(ol) {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+  }
+
+  .post-content :global(li) {
+    margin-bottom: 0.75rem;
+  }
+
+  .post-content :global(a) {
+    color: var(--primary-light);
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+
+  .post-content :global(a:hover) {
+    color: var(--primary);
+  }
+
+  .post-content :global(code) {
+    background: rgba(99, 102, 241, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: 'Courier New', monospace;
+  }
+
+  .post-content :global(pre) {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 2rem 0;
+    border: 1px solid var(--border);
+  }
+
+  .post-content :global(blockquote) {
+    border-left: 4px solid var(--primary);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--text-secondary);
+  }
+
+  .post-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+  }
+
+  .post-content :global(th),
+  .post-content :global(td) {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+
+  .post-content :global(th) {
+    background: var(--bg-card);
+    font-weight: 600;
+  }
+
+  .post-content :global(img) {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+
+  .post-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .tag {
+    padding: 0.5rem 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+
+  .cta-box {
+    padding: 2.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    text-align: center;
+    backdrop-filter: blur(16px);
+  }
+
+  .cta-box h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-box p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  }
+
+  .cta-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .blog-post {
+      padding: 2rem 1rem;
+    }
+
+    .post-content :global(h2) {
+      font-size: 1.75rem;
+    }
+
+    .cta-box {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
