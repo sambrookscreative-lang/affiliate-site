@@ -17,4 +17,4 @@ After testing both platforms with 20+ clients, here's the honest comparison nobo
 
 ---
 
-[Try HubSpot Free →](#) *(30% recurring commission for 12 months)*
+[Try HubSpot Free →](https://www.hubspot.com) *(30% recurring commission for 12 months)*

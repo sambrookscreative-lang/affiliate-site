@@ -48,7 +48,7 @@ HubSpot isn't just another CRM. It's an entire growth stack that:
 
 **Drawback:** Learning curve is steep. Budget 2-4 weeks for full implementation.
 
-[Try HubSpot Free →](#) *(30% recurring commission for 12 months)*
+[Try HubSpot Free →](https://www.hubspot.com) *(30% recurring commission for 12 months)*
 
 ---
 
@@ -73,7 +73,7 @@ HubSpot isn't just another CRM. It's an entire growth stack that:
 
 **Drawback:** AI drafts need human editing. Don't publish raw output.
 
-[Try Scalenut →](#) *(30-50% lifetime recurring commission)*
+[Try Scalenut →](https://www.scalenut.com) *(30-50% lifetime recurring commission)*
 
 ---
 

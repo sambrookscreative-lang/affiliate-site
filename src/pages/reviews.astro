@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Tool Reviews" description="In-depth reviews of AI automation and cybersecurity tools.">
   <div class="container" style="padding: 4rem 0;">
-    <h1 style="font-size: 3rem; margin-bottom: 2rem; color: var(--primary);">Tool Reviews</h1>
+    <h1 style="font-size: 3rem; margin-bottom: 2rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Tool Reviews</h1>
     <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 3rem;">
       Honest, data-driven reviews of the tools we've tested.
     </p>
@@ -13,27 +13,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="review-card">
         <h3>HubSpot</h3>
         <p class="category">AI Automation • CRM</p>
-        <p>Coming soon: Full review of HubSpot's automation features, pricing, and ROI.</p>
-        <a href="#" class="btn">Read Review →</a>
+        <p>All-in-one CRM and marketing automation platform. 30% recurring commission for 12 months.</p>
+        <div class="tool-meta">
+          <span>⭐ 4.5/5</span>
+          <span>💰 High-ticket</span>
+        </div>
+        <a href="/blog/hubspot-vs-salesforce-2026" class="btn">Read Review →</a>
       </div>
       <div class="review-card">
         <h3>Scalenut</h3>
         <p class="category">AI Content • SEO</p>
-        <p>Coming soon: Deep dive into Scalenut's AI-powered content creation capabilities.</p>
-        <a href="#" class="btn">Read Review →</a>
+        <p>SEO content lifecycle tool with AI-powered writing. 30-50% lifetime recurring commissions.</p>
+        <div class="tool-meta">
+          <span>⭐ 4.7/5</span>
+          <span>💰 Lifetime</span>
+        </div>
+        <a href="/blog/best-ai-automation-tools-2026" class="btn">Read Review →</a>
       </div>
       <div class="review-card">
         <h3>NordLayer</h3>
         <p class="category">Cybersecurity • VPN</p>
-        <p>Coming soon: Enterprise VPN security review and implementation guide.</p>
-        <a href="#" class="btn">Read Review →</a>
+        <p>Enterprise VPN with lifetime revenue share. Business-grade security for remote teams.</p>
+        <div class="tool-meta">
+          <span>⭐ 4.6/5</span>
+          <span>🔒 Enterprise</span>
+        </div>
+        <a href="/blog/secure-automation-stack-guide" class="btn">Read Review →</a>
       </div>
       <div class="review-card">
         <h3>Surfshark</h3>
         <p class="category">Cybersecurity • VPN</p>
-        <p>Coming soon: Consumer and SMB VPN review with security analysis.</p>
-        <a href="#" class="btn">Read Review →</a>
+        <p>Consumer and SMB VPN with 60% commission. Affordable security for small teams.</p>
+        <div class="tool-meta">
+          <span>⭐ 4.6/5</span>
+          <span>🔒 Business</span>
+        </div>
+        <a href="/blog/secure-automation-stack-guide" class="btn">Read Review →</a>
       </div>
+    </div>
+
+    <div style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; text-align: center;">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem;">Can't find what you're looking for?</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Check our comprehensive guides and comparisons.</p>
+      <a href="/blog" style="display: inline-block; padding: 1rem 2rem; background: var(--primary); color: #fff; border-radius: 10px; text-decoration: none; font-weight: 600;">Browse All Articles →</a>
     </div>
   </div>
 </BaseLayout>
@@ -48,9 +70,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .review-card {
     padding: 2rem;
     background: var(--bg-card);
-    border: 1px solid #333;
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
     transition: all 0.3s;
+    backdrop-filter: blur(16px);
   }
 
   .review-card:hover {
@@ -73,6 +96,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .review-card p {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+  }
+
+  .tool-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
   }
 
   .btn {

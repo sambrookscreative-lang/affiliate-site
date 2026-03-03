@@ -307,7 +307,7 @@ ChatGPT   | None       | No       | N/A
 ## Tools We Recommend
 
 ### VPN & Network Security
-- [NordLayer](#) — Best for small teams, lifetime revenue share
+- [NordLayer](https://nordlayer.com) — Best for small teams, lifetime revenue share
 - [Tailscale](#) — Great for technical teams
 - [Cloudflare Teams](#) — Free tier available
 
@@ -340,7 +340,7 @@ A: MFA on everything. Prevents 99% of account takeover attacks.
 ## Next Steps
 
 1. **Complete the Foundation checklist** (API keys, MFA, tool audit)
-2. **Set up a business VPN** ([NordLayer trial](#))
+2. **Set up a business VPN** ([Try NordLayer](https://nordlayer.com))
 3. **Review your AI tool contracts** for DPAs and data policies
 4. **Create your incident response playbook**
 
